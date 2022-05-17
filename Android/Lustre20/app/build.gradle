@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    
+
+
+    defaultConfig {
+        applicationId "br.org.nib.lustre20.app"
+        minSdkVersion 22
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+
+    }
+
+    buildTypes {
+       release {
+           minifyEnabled false
+           proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+       }
+    }
+
+}
+
+dependencies {
+    implementation project(':lustre')
+    implementation project(':base')
+    api 'com.larswerkman:HoloColorPicker:1.5'
+
+}
